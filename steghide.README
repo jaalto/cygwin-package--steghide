@@ -1,0 +1,75 @@
+steghide
+------------------------------------------
+
+A steganography hiding tool
+
+A steganography program which hides bits of a data file in
+some of the least significant bits of another file in such a way that
+the existence of the data file is not visible and cannot be proven.
+Steghide is designed to be portable and configurable and features
+hiding data in bmp, wav and au files, blowfish encryption, MD5 hashing
+of passphrases to blowfish keys, and pseudo-random distribution of
+hidden bits in the container data.
+
+Runtime requirements:
+  cygwin
+  libintl8
+  libjpeg7
+  mhash
+  zlib
+
+Build requirements:
+  cygwin
+  libintl8
+  libjpeg-devel
+  mhash
+  zlib-de
+Canonical homepage:
+  http://freshmeat.net/projects/steghide
+  http://sourceforge.net/projects/steghide
+  http://packages.debian.org/steghide
+
+Canonical download:
+  See above
+
+Version control repository:
+
+Mailing list:
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  Maintainer: Stefan Hetzl <shetzl@teleweb.at>, <shetzl@users.sf.net>
+  Bugs: https://sourceforge.net/tracker/?group_id=15895&atid=115895
+
+License:
+  GPL
+
+Language:
+  C++
+
+------------------------------------------
+
+Build instructions:
+  unpack steghide-*-src.tar.bz2
+    if you use setup to install this source package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./steghide*.sh all
+
+------------------------------------------
+
+Files included in the binary distribution:
+  See Cygwin package archive
+
+------------------------------------------
+
+Port Notes:
+
+----- version 0.5.1-1 -----
+- Initial release 2009-12-09 Jari Aalto
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2009 Jari Aalto; Licensed under GPL v2 or later

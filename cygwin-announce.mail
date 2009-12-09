@@ -1,0 +1,60 @@
+-- Copyright (C) 2009 Jari Aalto; Licensed under GPL v2 or later
+To: cygwin-announce@cygwin.com
+Subject: Updated: package 0.5.1-1 -- A steganography hiding tool
+
+PACKAGE DESCRIPTION
+===================
+
+Homepage: http://freshmeat.net/projects/steghide
+License : GPL
+
+A steganography program which hides bits of a data file in some of the
+least significant bits of another file in such a way that the
+existence of the data file is not visible and cannot be proven.
+Steghide is designed to be portable and configurable and features
+hiding data in bmp, wav and au files, blowfish encryption, MD5 hashing
+of passphrases to blowfish keys, and pseudo-random distribution of
+hidden bits in the container data.
+
+CHANGES SINCE LAST RELEASE
+==========================
+
+See homepage.
+
+INSTALL OR UPGRADE NOTES
+========================
+
+Standard install.
+
+CYGWIN INSTALLATION INFORMATION
+===============================
+
+To install this package, click on the "Install Cygwin now" link on the
+<http://cygwin.com/> web page. This downloads setup.exe to your
+system. Then, run setup and answer all of the questions. You'll find
+the package listed in the "All" category. After installation, read the
+documentation at directories:
+
+    /usr/share/doc/<package-version>/*
+    /usr/share/doc/Cygwin/<package-version>.README
+
+If you have questions or comments, please send them to the Cygwin
+mailing list at <cygwin@cygwin.com>.
+
+CYGWIN-ANNOUNCE UNSUBSCRIBE INFO
+================================
+
+This message has been sent to cygwin-announce list.
+
+If you want to unsubscribe from the mailing list, look at the
+"List-Unsubscribe: " tag in the email header of this message. Send
+email to the address specified there. It will be in the format:
+
+    cygwin-announce-unsubscribe-you=yourdomain.com@cygwin.com
+
+More information on unsubscribing can be found:
+
+    http://sources.redhat.com/lists.html#unsubscribe-simple
+
+Please read *all* of the information on unsubscribing that is available
+starting at the above URL.
