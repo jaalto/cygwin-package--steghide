@@ -1,1 +1,51 @@
-steghide_0.5.1-9.diff
+#!/bin/sh
+#
+# Extract direct debian changes, not included in debian/patches files
+# E.g. DIFF = steghide_0.5.1-9.diff
+#
+# debian.lst		List of all files in DIFF
+# debian-local.lst	Extract filename that touch /src files
+# debian-direct.lst	Those direct changes in /src, not in debian/patches
+# *-direct.patch	The patch
+#
+# debian/patches contain separate files that are already ok:
+#
+# build-with-gcc-4.patch
+# buildwith-gcc-3.4.patch
+
+arg=${1:-*.diff}
+DIFF=$(ls $arg)
+
+localdiff=$DIFF-debian-local-changes-direct.lst
+
+filterdiff -x "*deps*" -i "*/src/*" $DIFF > $localdiff
+
+list=debian.lst
+rm -f $list
+
+for file in $(ls *.patch | grep -v $DIFF)
+do
+    lsdiff $file | sed "s,.*/src/,/src/," >> $list
+done
+
+locals=debian-local.lst
+lsdiff $localdiff > $locals
+
+changes=debian-direct.lst
+
+echo "# Direct local chnages found in $DIFF"
+grep -vFf $list $locals | tee $changes
+
+opt=
+
+while read line
+do
+    opt="-i $line"
+done < $changes
+
+out=$DIFF-debian-local-changes-direct.patch
+filterdiff $opt $DIFF > $out
+
+echo "# $out"
+
+# End of file
