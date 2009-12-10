@@ -1,0 +1,11 @@
+--- steghide-0.5.1.orig/src/MHashPP.cc
++++ steghide-0.5.1/src/MHashPP.cc
+@@ -120,7 +120,7 @@
+ 
+ std::string MHashPP::getAlgorithmName (hashid id)
+ {
+-	char *name = mhash_get_hash_name (id) ;
++	char *name = (char *) mhash_get_hash_name (id) ;
+ 	std::string retval ;
+ 	if (name == NULL) {
+ 		retval = std::string ("<algorithm not found>") ;
