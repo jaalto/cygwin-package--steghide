@@ -7,4 +7,4 @@ hiding data in bmp, wav and au files, blowfish encryption, MD5 hashing
 of passphrases to blowfish keys, and pseudo-random distribution of
 hidden bits in the container data."
 category: Security
-requires: cygwin libintl8 libjpeg7 mhash zlib0
+requires: libintl8 libjpeg7 mhash zlib0
