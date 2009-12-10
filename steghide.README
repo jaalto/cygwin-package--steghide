@@ -16,14 +16,15 @@ Runtime requirements:
   libintl8
   libjpeg7
   mhash
-  zlib
+  zlib0
 
 Build requirements:
   cygwin
   libintl8
   libjpeg-devel
   mhash
-  zlib-de
+  zlib
+
 Canonical homepage:
   http://freshmeat.net/projects/steghide
   http://sourceforge.net/projects/steghide
