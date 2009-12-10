@@ -1,0 +1,5 @@
+# Just before make(1) is about to be run, this file is sourced
+
+# The Makefile default -02 causes core dump
+CYGBUILD_CFLAGS="-g"
+CYGBUILD_CXXFLAGS="-g"
