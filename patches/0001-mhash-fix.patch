@@ -1,0 +1,30 @@
+From 21ed606a8a2ec1ac66d5f28e9c81a0a44a03d597 Mon Sep 17 00:00:00 2001
+From: Jari Aalto <jari.aalto@cante.net>
+Date: Fri, 13 Jun 2014 16:13:43 +0300
+Subject: [PATCH] mhash fix
+Organization: Private
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+Signed-off-by: Jari Aalto <jari.aalto@cante.net>
+---
+ src/MHashPP.cc |    3 ++-
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+diff --git a/src/MHashPP.cc b/src/MHashPP.cc
+index 27b3d73..0eb2ed7 100755
+--- a/src/MHashPP.cc
++++ b/src/MHashPP.cc
+@@ -120,7 +120,8 @@ std::string MHashPP::getAlgorithmName ()
+ 
+ std::string MHashPP::getAlgorithmName (hashid id)
+ {
+-	char *name = mhash_get_hash_name (id) ;
++	// https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=354206
++	char *name = (char *)mhash_get_hash_name (id) ;
+ 	std::string retval ;
+ 	if (name == NULL) {
+ 		retval = std::string ("<algorithm not found>") ;
+-- 
+1.7.9
+
