@@ -12,17 +12,19 @@ of passphrases to blowfish keys, and pseudo-random distribution of
 hidden bits in the container data.
 
 Runtime requirements:
-  cygwin
+  libgcc1
   libintl8
-  libjpeg7
-  mhash
+  libjpeg8
+  libmcrypt4
+  libmhash2
+  libstdc++6
   zlib0
 
 Build requirements:
-  cygwin
   libintl8
   libjpeg-devel
-  mhash
+  libmcrypt-devel
+  libmhash-devel
   zlib
 
 Canonical homepage:
@@ -69,8 +71,12 @@ Files included in the binary distribution:
 
 Port Notes:
 
+----- version 0.5.1-2 -----
+- New release 2014-06-13 Jari Aalto
+- Write mhash patch (x64)
+
 ----- version 0.5.1-1 -----
 - Initial release 2009-12-09 Jari Aalto
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2009 Jari Aalto; Licensed under GPL v2 or later
+Copyright (C) 2009-2014 Jari Aalto; Licensed under GPL v2 or later
