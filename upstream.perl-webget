@@ -1,0 +1,3 @@
+tag1: steghide
+ http://packages.debian.org/unstable/steghide pregexp:orig.tar.gz file:steghide_0.5.1.orig.tar.gz new: x:
+
