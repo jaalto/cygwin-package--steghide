@@ -1,5 +1,6 @@
 To: cygwin-announce@cygwin.com
-Subject: Updated: steghide 0.5.1-2 -- A steganography hiding tool
+Subject: Updated: steghide 0.5.1-3 -- A steganography hiding tool
+--text follows this line--
 
 PACKAGE DESCRIPTION
 ===================
@@ -23,6 +24,7 @@ See homepage.
 INSTALL OR UPGRADE NOTES
 ========================
 
+Cygwin: compiled with libjpeg8
 Standard install.
 
 CYGWIN INSTALLATION INFORMATION
