@@ -1,6 +1,8 @@
 From: <jari.aalto@cante.net>
+Forwarded: https://sourceforge.net/p/steghide/bugs/10/
 Subject: Add missing header to compile in x86
   Fixes error: 'strcpy' was not declared in this scope
+  Bug Forward upstream 2015-02-18
 
 ---
  src/MCryptPP.cc |    1 +

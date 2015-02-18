@@ -1,8 +1,10 @@
 From: <jari.aalto@cante.net>
+Forwarded: https://sourceforge.net/p/steghide/bugs/9/
 Subject: Fix compiling in x86
  The messagess were:
  libtool: link: unable to infer tagged configuration
  libtool: link: specify a tag with `--tag'
+  Bug Forward upstream 2015-02-18
 
 ---
  intl/Makefile.in |    2 +-
