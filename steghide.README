@@ -29,7 +29,8 @@ Build requirements:
   zlib
 
 Canonical homepage:
-  http://freshmeat.net/projects/steghide
+  http://steghide.sourceforge.net
+  http://sourceforge.net/projects/steghide
   http://sourceforge.net/projects/steghide
   http://packages.debian.org/steghide
 
@@ -37,6 +38,7 @@ Canonical download:
   See above
 
 Version control repository:
+  http://sourceforge.net/p/steghide/code/
 
 Mailing list:
 
@@ -46,7 +48,7 @@ IRC channel:
 
 Upstream contact:
   Maintainer: Stefan Hetzl <shetzl@teleweb.at>, <shetzl@users.sf.net>
-  Bugs: https://sourceforge.net/tracker/?group_id=15895&atid=115895
+  Bugs: http://sourceforge.net/p/steghide/bugs/
 
 License:
   GPL
