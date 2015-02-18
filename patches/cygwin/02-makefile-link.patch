@@ -1,0 +1,33 @@
+From: <jari.aalto@cante.net>
+Subject: Fix compiling in x86
+ The messagess were:
+ libtool: link: unable to infer tagged configuration
+ libtool: link: specify a tag with `--tag'
+
+---
+ intl/Makefile.in |    2 +-
+ src/Makefile.in  |    2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+--- a/intl/Makefile.in
++++ b/intl/Makefile.in
+@@ -117,7 +117,7 @@ libintl.a libgnuintl.a: $(OBJECTS)
+ 	$(RANLIB) $@
+ 
+ libintl.la libgnuintl.la: $(OBJECTS)
+-	$(LIBTOOL) --mode=link \
++	$(LIBTOOL) --mode=link --tag=CXX \
+ 	  $(CC) $(CPPFLAGS) $(CFLAGS) $(XCFLAGS) $(LDFLAGS) -o $@ \
+ 	  $(OBJECTS) @LTLIBICONV@ -lc \
+ 	  -version-info $(LTV_CURRENT):$(LTV_REVISION):$(LTV_AGE) \
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -278,7 +278,7 @@ LTCXXCOMPILE = $(LIBTOOL) --mode=compile
+ 	$(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) \
+ 	$(AM_CXXFLAGS) $(CXXFLAGS)
+ CXXLD = $(CXX)
+-CXXLINK = $(LIBTOOL) --mode=link $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
++CXXLINK = $(LIBTOOL) --mode=link --tag=CXX $(CXXLD) $(AM_CXXFLAGS) $(CXXFLAGS) \
+ 	$(AM_LDFLAGS) $(LDFLAGS) -o $@
+ DIST_SOURCES = $(steghide_SOURCES)
+ HEADERS = $(noinst_HEADERS)
